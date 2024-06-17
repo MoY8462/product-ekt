@@ -16,7 +16,7 @@ struct ProductosListView: View {
             Button(action: {
                 viewModel.selectedProducto = producto
                 viewModel.showProduct = false
-                // Aquí necesitarías alguna forma de "regresar" a ContentView, pero en SwiftUI, la navegación se maneja automáticamente basada en el estado.
+                
             }) {
                 ProductCardView(producto: producto)
             }

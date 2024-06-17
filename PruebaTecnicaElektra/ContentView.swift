@@ -29,7 +29,7 @@ struct ContentView: View {
                     .background(NavigationLink(destination: ProductosListView(), isActive: $viewModel.showProduct) { EmptyView() }.hidden())
                     
                     .padding()
-                    .background(Color.blue)
+                    .background(Color("RedEkt"))
                     .foregroundColor(.white)
                     .cornerRadius(8)
                     

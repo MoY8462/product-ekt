@@ -7,16 +7,7 @@
 
 import Foundation
 
-/*
-struct Producto: Identifiable, Codable {
-    let id: String
-    let nombre: String
-    let precio: Double
-    let categoria: String
-    let imagenURL: String
-}*/
-
-// MARK: - Welcome
+// MARK: - GetProducto
 struct GetProducto: Codable {
     let codigo, mensaje, folio, advertencia: String
     let resultado: Resultado

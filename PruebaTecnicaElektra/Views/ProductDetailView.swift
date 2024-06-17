@@ -12,7 +12,7 @@ struct ProductDetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 20) { // Ajusta el espaciado entre elementos
+            VStack(alignment: .leading, spacing: 20) {
                 if let url = URL(string: producto.urlImagenes.first ?? "") {
                     AsyncImage(url: url) { image in
                         image.resizable()
@@ -21,7 +21,7 @@ struct ProductDetailView: View {
                         Color.gray
                     }
                     .frame(maxWidth: .infinity)
-                    .padding(.bottom, 20) // Add padding to the bottom of the image
+                    .padding(.bottom, 20) 
                     
                 }
                 

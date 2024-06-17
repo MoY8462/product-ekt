@@ -13,24 +13,26 @@ struct ProductCardView: View {
     let producto: Producto
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) { // Añade un espaciado entre elementos
+        VStack(alignment: .leading, spacing: 8) {
             if let url = URL(string: producto.urlImagenes.first ?? "") {
                 AsyncImage(url: url) { image in
-                    image.resizable() // Hace la imagen redimensionable
-                        .aspectRatio(contentMode: .fill) // Cambia a fill para mantener el aspecto llenando el espacio
+                    image.resizable()
+                        .aspectRatio(contentMode: .fill)
                 } placeholder: {
-                    Color.gray // Un placeholder para cuando la imagen está cargando
+                    Color.gray
                 }
-                .frame(width: 300, height: 200) // Limita el tamaño de la imagen
+                .frame(width: 300, height: 200)
                 .clipped() // Asegura que la imagen no se desborde de su marco
-                .cornerRadius(10) // Opcional: redondea las esquinas de la imagen
+                .cornerRadius(10)
             }
             
             Text(producto.nombre)
                 .font(.headline)
+                .foregroundColor(.black)
             
             Text("Precio: \(producto.precioFinal, specifier: "%.2f")")
                 .font(.subheadline)
+                .foregroundColor(.gray)
             
             Text("Categoría: \(producto.codigoCategoria.rawValue)")
                 .font(.footnote)

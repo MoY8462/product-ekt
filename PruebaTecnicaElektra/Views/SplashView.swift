@@ -24,11 +24,10 @@ struct SplashView: View {
                 .environmentObject(viewModel)
         } else {
             VStack {
-                Image(systemName: "cart.fill")
+                Image("ImgEkt")
                     .resizable()
                     .frame(width: 100, height: 100)
-                    .foregroundColor(.blue)
-                Text("Cargando productos...")
+                Text(Constants.InfoMessages.splash)
                     .font(.headline)
                     .padding(.top, 20)
             }
