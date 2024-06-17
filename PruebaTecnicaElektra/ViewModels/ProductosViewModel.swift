@@ -11,6 +11,7 @@ import SwiftUI
 class ProductosViewModel: ObservableObject {
     @Published var productos: [Producto] = []
     @Published var selectedProducto: Producto? = nil
+    @Published var showProduct = false
     @Published var errorMessage: String? = nil
     @Published var isLoading: Bool = false
     
