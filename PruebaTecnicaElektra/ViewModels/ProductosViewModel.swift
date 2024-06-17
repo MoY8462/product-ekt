@@ -29,8 +29,10 @@ class ProductosViewModel: ObservableObject {
                 case .success(let productos):
                     self.productos = productos.resultado.productos
                     self.errorMessage = nil
+                    
                 case .failure(let error):
                     self.errorMessage = error.localizedDescription
+                    
                 }
             }
         }

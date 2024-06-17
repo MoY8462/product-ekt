@@ -16,6 +16,10 @@
 		C64BCF752C1F78DF0036D00D /* ProductoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BCF742C1F78DF0036D00D /* ProductoDataSource.swift */; };
 		C64BCF782C1F79F00036D00D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BCF772C1F79F00036D00D /* Constants.swift */; };
 		C64BCF7E2C1F83C10036D00D /* ProductosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BCF7D2C1F83C10036D00D /* ProductosViewModel.swift */; };
+		C6DD2A5D2C1FA0840022A2E6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD2A5A2C1FA0840022A2E6 /* SplashView.swift */; };
+		C6DD2A5E2C1FA0840022A2E6 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD2A5B2C1FA0840022A2E6 /* ProductCardView.swift */; };
+		C6DD2A5F2C1FA0840022A2E6 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD2A5C2C1FA0840022A2E6 /* ProductDetailView.swift */; };
+		C6DD2A622C1FA94B0022A2E6 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD2A612C1FA94B0022A2E6 /* ProductListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,11 @@
 		C64BCF742C1F78DF0036D00D /* ProductoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoDataSource.swift; sourceTree = "<group>"; };
 		C64BCF772C1F79F00036D00D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C64BCF7D2C1F83C10036D00D /* ProductosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductosViewModel.swift; sourceTree = "<group>"; };
+		C6DD2A5A2C1FA0840022A2E6 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		C6DD2A5B2C1FA0840022A2E6 /* ProductCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
+		C6DD2A5C2C1FA0840022A2E6 /* ProductDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		C6DD2A602C1FA1750022A2E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C6DD2A612C1FA94B0022A2E6 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,7 @@
 		C64BCF5A2C1F64C50036D00D /* PruebaTecnicaElektra */ = {
 			isa = PBXGroup;
 			children = (
+				C6DD2A602C1FA1750022A2E6 /* Info.plist */,
 				C64BCF762C1F79CF0036D00D /* Utilities */,
 				C64BCF732C1F78BC0036D00D /* DataSource */,
 				C64BCF702C1F78690036D00D /* Services */,
@@ -94,6 +104,10 @@
 		C64BCF6A2C1F6B870036D00D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C6DD2A5B2C1FA0840022A2E6 /* ProductCardView.swift */,
+				C6DD2A5C2C1FA0840022A2E6 /* ProductDetailView.swift */,
+				C6DD2A5A2C1FA0840022A2E6 /* SplashView.swift */,
+				C6DD2A612C1FA94B0022A2E6 /* ProductListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,11 +214,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6DD2A622C1FA94B0022A2E6 /* ProductListView.swift in Sources */,
 				C64BCF6D2C1F6BF40036D00D /* GetProducto.swift in Sources */,
+				C6DD2A5F2C1FA0840022A2E6 /* ProductDetailView.swift in Sources */,
+				C6DD2A5D2C1FA0840022A2E6 /* SplashView.swift in Sources */,
 				C64BCF7E2C1F83C10036D00D /* ProductosViewModel.swift in Sources */,
 				C64BCF752C1F78DF0036D00D /* ProductoDataSource.swift in Sources */,
 				C64BCF722C1F78910036D00D /* ProductoService.swift in Sources */,
 				C64BCF5E2C1F64C50036D00D /* ContentView.swift in Sources */,
+				C6DD2A5E2C1FA0840022A2E6 /* ProductCardView.swift in Sources */,
 				C64BCF5C2C1F64C50036D00D /* PruebaTecnicaElektraApp.swift in Sources */,
 				C64BCF782C1F79F00036D00D /* Constants.swift in Sources */,
 			);
@@ -343,11 +361,13 @@
 				DEVELOPMENT_TEAM = U25ZY9P5TB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PruebaTecnicaElektra/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,11 +392,13 @@
 				DEVELOPMENT_TEAM = U25ZY9P5TB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PruebaTecnicaElektra/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

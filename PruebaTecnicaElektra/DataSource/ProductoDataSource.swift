@@ -13,6 +13,7 @@ enum ProductoError: Error {
     case httpError(Int)
     case decodingError(Error)
     case unknownError
+    case connectivityError
     
     var localizedDescription: String {
         switch self {
@@ -26,7 +27,10 @@ enum ProductoError: Error {
             return "\(Constants.ErrorMessages.decodingError) \(error.localizedDescription)"
         case .unknownError:
             return Constants.ErrorMessages.unknownError
+        case .connectivityError:
+            return Constants.ErrorMessages.networkError
         }
+        
     }
 }
 
@@ -43,7 +47,10 @@ class ProductoAPIDataSource: ProductoDataSource {
         }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
+            if let error = error as NSError?, error.code == NSURLErrorNotConnectedToInternet {
+                completion(.failure(.connectivityError))
+                return
+            }else if let error = error {
                 completion(.failure(.networkError(error)))
                 return
             }
